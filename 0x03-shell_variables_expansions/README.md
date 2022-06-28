@@ -7,4 +7,4 @@ th to success is to take massive, determined action ->Add /action to the PATH. /
 
 
 
-
+3. If the path be beautiful, let us not ask where it leads ->Create a script that counts the number of directories in the PATH.
