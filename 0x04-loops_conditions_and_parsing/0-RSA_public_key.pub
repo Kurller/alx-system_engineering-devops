@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPUSyVOIJjm/yX+YmKZzG11ZwoVIpqAhCC2I0/mq8jxJmNhqE5a8XSVrjVFe0cR+sHukQrMkhjfRujRFRXwpJrD/gg/i
 
 /InMpsw6DHzx6b0xdSfwgfe5ORrzij+Rsm4BTsgLCbdXvOfEgFknAQqW3Diye9mkk8fWrA94nHVdsBXs/QQiBbelzs5zXH0LtHw/9k4soNkEzjU1hbmsKVkSedTwZsZDGA
