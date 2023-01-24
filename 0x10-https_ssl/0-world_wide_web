@@ -23,7 +23,6 @@
 #-- To be evaluated --
 
 subdomains_all=( "www" "lb-01" "web-01" "web-02" )
-
 runDig () {
     subdomain=$1
     domain=$2
