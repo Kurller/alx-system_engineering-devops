@@ -41,7 +41,7 @@ frontend topkolaworld.tech-http-frontend
 
 
 frontend  topkolaworld.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/www.lb-01.topkolaworld.tech.pem
+	bind *:443 ssl crt /etc/haproxy/cert/www.lb-01.topkolaworld.tech.pem
 	http-request set-header X-Forwarded-Proto https
         default_backend topkolaworld.tech-backend
 
