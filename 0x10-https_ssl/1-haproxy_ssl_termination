@@ -33,20 +33,20 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-# start of parameters for beta-scribbles.tech
-frontend betascribbles.tech-http-frontend
+# start of parameters for topkolaworld.tech
+frontend topkolaworld.tech-http-frontend
 	bind	 *:80
 	http-request set-header X-Forwarded-Proto http
-	default_backend	 beta-scribbles.tech-backend
+	default_backend	topkolaworld.tech-backend
 
 
-frontend  beta-scribbles.tech-https-frontend
-	bind *:443 ssl crt /etc/ssl/beta-scribbles.tech.pem
+frontend  topkolaworld.tech-https-frontend
+	bind *:443 ssl crt /etc/ssl/www.topkolaworld.tech.pem
 	http-request set-header X-Forwarded-Proto https
-        default_backend beta-scribbles.tech-backend
+        default_backend topkolaworld.tech-backend
 
 
-backend beta-scribbles.tech-backend
+backend topkolaworld.tech-backend
         balance roundrobin
         server 77559-web-01 34.207.61.229:80 check
         server 77559-web-02 52.91.183.18:80 check
