@@ -34,19 +34,16 @@ defaults
 	errorfile 504 /etc/haproxy/errors/504.http
 
 # start of parameters for topkolaworld.tech
-frontend topkolaworld.tech-http-frontend
-	bind *:80
-	http-request set-header X-Forwarded-Proto http
-	default_backend	topkolaworld.tech-backend
-
-
-frontend  topkolaworld.tech-https-frontend
+frontend linuxtechi-frontend
+        bind *:80
+        mode http
 	bind *:443 ssl crt /etc/haproxy/cert/www.lb-01.topkolaworld.tech.pem
-	http-request set-header X-Forwarded-Proto https
-        default_backend topkolaworld.tech-backend
+        redirect scheme https if !{ ssl_fc }
+        stats uri /haproxy?stats
+        default_backend web-servers
 
 
-backend topkolaworld.tech-backend
+backend web-servers
         balance roundrobin
         server 77559-web-01 34.207.61.229:80 check
         server 77559-web-02 52.91.183.18:80 check
